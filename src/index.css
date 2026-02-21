@@ -86,12 +86,33 @@
     box-shadow: 0 0 30px hsl(var(--gold) / 0.3), 0 0 60px hsl(var(--gold) / 0.1);
   }
 
-  .gold-glow-text {
-    text-shadow: 0 0 20px hsl(var(--gold) / 0.4);
-  }
-
   .gold-divider {
     @apply w-24 h-px mx-auto;
     background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
   }
+}
+
+/* Continuous marquee animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 60s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-duration: 120s;
 }
