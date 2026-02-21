@@ -1,5 +1,9 @@
-const InfiniteScrollText = () => {
-  const text = "We Build. We Market. We Scale.";
+interface InfiniteScrollTextProps {
+  text?: string;
+  className?: string;
+}
+
+const InfiniteScrollText = ({ text = "We Build. We Market. We Scale.", className = "text-gold" }: InfiniteScrollTextProps) => {
   const repeatedText = Array(20).fill(text);
 
   return (
@@ -8,7 +12,7 @@ const InfiniteScrollText = () => {
         {repeatedText.map((item, index) => (
           <span
             key={index}
-            className="font-heading text-2xl md:text-4xl text-gold mx-8 inline-block"
+            className={`font-heading text-2xl md:text-4xl ${className} mx-8 inline-block`}
           >
             {item}
           </span>

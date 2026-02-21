@@ -13,6 +13,20 @@ const Index = () => {
       <Hero />
       <InfiniteScrollText />
       <ServiceSlider />
+      <div className="w-full bg-white">
+        <div className="overflow-hidden py-8 border-y border-gray-200">
+          <div className="flex whitespace-nowrap animate-infinite-scroll">
+            {Array(20).fill("GrowVanta Media").map((item, index) => (
+              <span
+                key={index}
+                className="font-heading text-2xl md:text-4xl text-black mx-8 inline-block"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
       <About />
       <WhyChooseUs />
       <Results />
