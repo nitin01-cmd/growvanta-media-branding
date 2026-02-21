@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import InfiniteScrollText from "@/components/InfiniteScrollText";
 import ServiceSlider from "@/components/ServiceSlider";
 import About from "@/components/About";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -10,6 +11,7 @@ const Index = () => {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <InfiniteScrollText />
       <ServiceSlider />
       <About />
       <WhyChooseUs />
